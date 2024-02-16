@@ -20,7 +20,7 @@
   
 4. Fine-tuning Approach:
    - Parameter-Efficient Fine-Tuning (PEFT)[[https://arxiv.org/abs/2312.12148]]: Recognizing the cost implications of full fine-tuning, I adopt PEFT methodologies. These innovative techniques strategically focus on optimizing a subset of model parameters, significantly reducing computational demands and training time.
-   - QLoRA Algorithm[https://arxiv.org/abs/2305.14314]: Among various PEFT options, I delve into the QLoRA algorithm. This method leverages 4-bit precision for the base model, essentially compressing information while maintaining crucial details. The gradients are then backpropagated through these compressed method into specialized "Low-Rank Adapters" (LoRAs), efficiently capturing task-specific knowledge without inflating parameter count.
+   - QLoRA Algorithm[https://arxiv.org/abs/2305.14314]: Among various PEFT options, I delve into the QLoRA algorithm. This method leverages 4-bit precision for the base model, essentially compressing information while maintaining crucial details. The gradients are then backpropagated through this compressed method into specialized "Low-Rank Adapters" (LoRAs), efficiently capturing task-specific knowledge without inflating parameter count.
 
 5. Evaluation Strategy:
    - Human Comparison: While acknowledging the challenges of crafting an objective evaluation metric for this subjective task, I compare the fine-tuned model's outputs against human evaluations of the same self-introduction essays. This approach provides valuable insights into the model's ability to align with human judgment.
@@ -37,6 +37,7 @@ INPUT PROMPT:
 
     ### context:
     본인 성격의 장단점 및 가치관을 성장과정(가족, 학창시절, 주변인과의 관계)에 기반하여 작성해 주세요. (최대 1,500자 입력가능)
+    
     "신뢰를 만든 커뮤니케이션, 플래너를 통해 배운 계획의 중요성"
     
     제 성격의 장점은 다양한 사람과 자연스럽게 어울리는 커뮤니케이션 역량입니다.
@@ -44,8 +45,8 @@ INPUT PROMPT:
     한편, 저는 많은 일이 집중되었을 때 집중력이 약해지곤 합니다. 일례로, 저는 대학 시절, 전공 공부와 학회 활동, 아르바이트를 동시에 진행하며 어려움을 겪었습니다. 그때 플래너를 사용하여 일주일 단위로 계획을 세웠고, 업무를 완수할 수 있었습니다. 이후 저는 계획을 세우는 습관을 키웠고, 효율적인 시간 관리로 다양한 업무 성과를 만들 수 있었습니다.좋은점 1
     
     "스스로 기회를 만드는 사람, 130개 거절 속에서 타결해 낸 공연 후원 가능성"
-    저는 원하는 목표를 이루기 위해 스스로 기회를 만들어 왔습니다. 이를 통해 위기 속에서도 새로운 기회를 찾는 끈기의 자세를 갖출 수 있었고, 불가능의 예상을 넘어 성과를 만들 수 있었습니다. 실제로, 저는 코피노 문제를 사회에 알리는 공연 기획 프로젝트 ‘OOOOOOO’에 참여했을 당시, 이러한 자세로 공연의 후원 가능성을 타결해 낸 경험이 있습니다.
     
+    저는 원하는 목표를 이루기 위해 스스로 기회를 만들어 왔습니다. 이를 통해 위기 속에서도 새로운 기회를 찾는 끈기의 자세를 갖출 수 있었고, 불가능의 예상을 넘어 성과를 만들 수 있었습니다. 실제로, 저는 코피노 문제를 사회에 알리는 공연 기획 프로젝트 ‘OOOOOOO’에 참여했을 당시, 이러한 자세로 공연의 후원 가능성을 타결해 낸 경험이 있습니다.
     공연을 진행하기 위한 자금을 확보하는 활동을 진행했을 때의 일입니다.
     당시 대학생의 활동을 지원하는 기업의 CSR 사례가 많았기 때문에, 저희는 기업의 후원을 유치하는 것을 목표로 설정하였습니다. 따라서 규모와 후원 활동을 기준으로 국내 100개 기업을 선정하였고, 담당자의 연락처를 리스트 화하여 메일과 통화를 통해 공연의 후원을 요청하였습니다. 하지만 기업 대부분으로부터 예산상의 불가 또는 관련성이 없다는 거절만 돌아왔습니다.
     약 2주의 시간이 남았을 때, 계속된 거절로 팀 전체가 불가능한 도전이라는 것을 예감하고 좌절했습니다. 저 또한 불가능을 생각했지만, 포기하지 않고 거절의 이유를 되짚어 기업 선정에 문제가 있었다는 것을 파악했습니다. 그래서 저는 코피노 문제와 관련이 있는 사회적 기업에 다시 후원을 요청해보자고 팀원들을 설득했습니다.
