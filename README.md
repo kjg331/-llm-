@@ -1,6 +1,7 @@
 ## In-Depth Description of Korean 자기소개서 Evaluation Model Fine-tuning:
 
-### Project Goal: This project delves into fine-tuning a relatively small Korean Language Model (LLM) specifically for evaluating 자기소개서, a vital component of the Korean employment process. Essentially, I aim to create a model that can assess the quality and effectiveness of self-introduction essays submitted by job candidates.
+### Project Goal: 
+This project delves into fine-tuning a relatively small Korean Language Model (LLM) specifically for evaluating 자기소개서, a vital component of the Korean employment process. Essentially, I aim to create a model that can assess the quality and effectiveness of self-introduction essays submitted by job candidates.
 
 ### Methodology Overview:
   1. System Setup:
